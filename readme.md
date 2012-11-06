@@ -1,3 +1,5 @@
+https://github.com/impishj/Css-To-Inline-Styles
+
 Css To Inline Styles.app
 
 Usage: 
@@ -5,14 +7,17 @@ Usage:
 2. Copy the output in the window
 
 Credits:
-Jeremy Sewell Made with Platypus in about an hour! http://sveinbjorn.org/platypus/
+Jeremy Sewell Made this with Platypus in about an hour! http://sveinbjorn.org/platypus/
 
 Based completely on Tijs Verkoyen's CssToInlineStyles class. which can be found here: http://classes.verkoyen.eu/css_to_inline_styles
 
 Tijs Verkoyen is not in any way associated with this application.
 
-Licence:
+Licence for the OSX application:
 Jeremy Sewell releases this thing into the public Domain, it's free, just don't redistribute for commercial purposes.
+
+
+Licence for the php class contained within the application:
 
 The PHP Script CssToInlineStyles class is Copyright©, Tijs Verkoyen. All rights reserved.
 
