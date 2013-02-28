@@ -1,8 +1,10 @@
-The task of mobile friendly email design seems like it's going to be painful this is my attempt to make it cleaner.
+The task of mobile friendly email design seems like it's going to be painful.  
+This is my attempt to make it cleaner.  
 
 This update adds the ability to add outlook conditional comments via a <mobile> tag. 
 
-This inliner now interprets this (<mobile> tag):
+This inliner now interprets this (<mobile> tag):  
+
 `
 <mobile>
 The content here will only be visiable on mobile devices
