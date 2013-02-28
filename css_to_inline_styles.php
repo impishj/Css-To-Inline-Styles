@@ -68,6 +68,14 @@ class CSSToInlineStyles
 
 
 	/**
+	 * Should the generated HTML be cleaned
+	 *
+	 * @var	bool
+	 */
+	private $tagReplace = true;
+
+
+	/**
 	 * The HTML to process
 	 *
 	 * @var	string
@@ -182,11 +190,28 @@ class CSSToInlineStyles
 	 */
 	private function cleanupHTML($html)
 	{
+		
 		// remove classes
 		$html = preg_replace('/(\s)+class="(.*)"(\s)+/U', ' ', $html);
 
 		// remove IDs
 		$html = preg_replace('/(\s)+id="(.*)"(\s)+/U', ' ', $html);
+
+		// return
+		return $html;
+	}
+
+	/**
+	 * Cleanup the generated HTML
+	 *
+	 * @return	string
+	 * @param	string $html	The HTML to cleanup
+	 */
+	private function tagReplaceHTML($html)
+	{
+		// Replace <mobile> tags with approporate code to hide for desktop 
+		$html = preg_replace("~<mobile>~", "<!--<![if mso]-->\n<div class=\"show-mobile\" style=\"display:none; width:0px; max-height:0px; overflow:hidden; mso-hide:all; line-height: 0px;\" > \n", $html);
+		$html = preg_replace("~</mobile>~", "</div>\n<!--<![endif]-->\n", $html);
 
 		// return
 		return $html;
@@ -332,6 +357,9 @@ class CSSToInlineStyles
 
 		// cleanup the HTML if we need to
 		if($this->cleanup) $html = $this->cleanupHTML($html);
+
+		if($this->tagReplace) $html = $this->tagReplaceHTML($html);
+		
 
 		echo $html;
 		// return
