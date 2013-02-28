@@ -14,7 +14,8 @@ as this:
 
 ```html
 <!--<![if mso]-->
-<div class="show-mobile" style="display:none; width:0px; max-height:0px; overflow:hidden; mso-hide:all; line-height: 0px;" >
+<div class="show-mobile" style="display:none; width:0px; 
+max-height:0px; overflow:hidden; mso-hide:all; line-height: 0px;" >
 The content here will only be visiable on mobile devices
 </div>
 <!--<![endif]-->
