@@ -34,15 +34,15 @@
 		<string>fold</string>
 	</array>
 	<key>IconPath</key>
-	<string>/Applications/Platypus.app/Contents/Resources/PlatypusDefault.icns</string>
+	<string>/tmp/PlatypusIcon.icns</string>
 	<key>Identifier</key>
-	<string>org.jeremys.CssToInlineStyles</string>
+	<string>org.jeremys.CssToInlineStyles-mobile-email</string>
 	<key>Interpreter</key>
 	<string>/usr/bin/php</string>
 	<key>InterpreterArgs</key>
 	<array/>
 	<key>Name</key>
-	<string>Css To Inline Styles</string>
+	<string>Css To Inline Styles-mobile-email</string>
 	<key>NibPath</key>
 	<string>/usr/local/share/platypus/MainMenu.nib</string>
 	<key>OptimizeApplication</key>
