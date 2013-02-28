@@ -3,7 +3,7 @@ This is my attempt to make it cleaner.
 
 This update adds the ability to add outlook conditional comments via a <mobile> tag. 
 
-This inliner now interprets this (<mobile> tag):  
+This inliner now interprets this:  
 
 ```html
 <mobile>
