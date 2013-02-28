@@ -5,54 +5,55 @@ This update adds the ability to add outlook conditional comments via a <mobile> 
 
 This inliner now interprets this (<mobile> tag):  
 
-`
+```html
 <mobile>
 The content here will only be visiable on mobile devices
 </mobile>
-`
+```
 as this:
-`
+
+```html
 <!--<![if mso]-->
 <div class="show-mobile" style="display:none; width:0px; max-height:0px; overflow:hidden; mso-hide:all; line-height: 0px;" >
 The content here will only be visiable on mobile devices
 </div>
 <!--<![endif]-->
-`
+```
 
 the .hide-mobile class can be used to hide elements from mobile clients.
 [small]however for it to work in gmail it must be a div element it can't be a table element (because gmail converts them to divs and I'm guessing the inline style is lost there)[/small]
 
-`
-                        .show-mobile{
-                          display:none;
-                          width:0px;
-                          max-height:0px;
-                          overflow:hidden;  
-                          mso-hide:all;
-                          line-height: 0px;
-                        }
+```css
+.show-mobile{
+  display:none;
+  width:0px;
+  max-height:0px;
+  overflow:hidden;  
+  mso-hide:all;
+  line-height: 0px;
+}
 
-                        @media only screen and (max-device-width: 480px) {
+@media only screen and (max-device-width: 480px) {
 
-                            body[yahoo] .show-mobile {
-	                            display:block !important;
-	                            margin: 0;
-	                            padding:0;
-	                            overflow : visible !important;
-	                            width:auto !important;
-	                            max-height:inherit !important;
-	                            line-height: auto !important; 
-                            }
+    body[yahoo] .show-mobile {
+        display:block !important;
+        margin: 0;
+        padding:0;
+        overflow : visible !important;
+        width:auto !important;
+        max-height:inherit !important;
+        line-height: auto !important; 
+    }
 
-                            body[yahoo] .hide-mobile{
-								display:none;
-								width:0px;
-								max-height:0px;
-								overflow:hidden;
-								overflow:hidden !important;
-                            }
-						}
-`
+    body[yahoo] .hide-mobile{
+		display:none;
+		width:0px;
+		max-height:0px;
+		overflow:hidden;
+		overflow:hidden !important;
+    }
+}
+```
 
 General information about the inliner:
 
