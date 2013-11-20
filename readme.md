@@ -22,7 +22,7 @@ The content here will only be visiable on mobile devices
 ```
 
 the .hide-mobile class can be used to hide elements from mobile clients.
-[small]however for it to work in gmail it must be a div element it can't be a table element (because gmail converts them to divs and I'm guessing the inline style is lost there)[/small]
+*however for it to work in gmail it must be a div element it can't be a table element (because gmail converts them to divs and I'm guessing the inline style is lost there)*
 
 ```css
 .show-mobile{
