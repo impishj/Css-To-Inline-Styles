@@ -69,7 +69,7 @@ Usage:
 Credits:
 Jeremy Sewell Made this with Platypus in about an hour! (Uptate: several hours) http://sveinbjorn.org/platypus/
 
-Based on Tijs Verkoyen's CssToInlineStyles class. which can be found here: http://classes.verkoyen.eu/css_to_inline_styles
+Based on Tijs Verkoyen's CssToInlineStyles class. which can be found here: http://github.com/tijsverkoyen/CssToInlineStyles
 
 Tijs Verkoyen is not in any way associated with this application.
 
