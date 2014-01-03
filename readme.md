@@ -1,9 +1,9 @@
-The task of mobile friendly email design seems like it's going to be painful.  
-This is my attempt to make it cleaner.  
+The task of mobile friendly email design seems like it's going to be painful.
+This is my attempt to make it cleaner.
 
-This update adds the ability to add outlook conditional comments via a <mobile> tag. 
+This update adds the ability to add outlook conditional comments via a <mobile> tag.
 
-This inliner now interprets this:  
+This inliner now interprets this:
 
 ```html
 <mobile>
@@ -13,8 +13,8 @@ The content here will only be visiable on mobile devices
 as this:
 
 ```html
-<!--<![if mso]-->
-<div class="show-mobile" style="display:none; width:0px; 
+<!--<![if !mso]--><!-- -->
+<div class="show-mobile" style="display:none; width:0px;
 max-height:0px; overflow:hidden; mso-hide:all; line-height: 0px;" >
 The content here will only be visiable on mobile devices
 </div>
@@ -29,7 +29,7 @@ the .hide-mobile class can be used to hide elements from mobile clients.
   display:none;
   width:0px;
   max-height:0px;
-  overflow:hidden;  
+  overflow:hidden;
   mso-hide:all;
   line-height: 0px;
 }
@@ -43,7 +43,7 @@ the .hide-mobile class can be used to hide elements from mobile clients.
         overflow : visible !important;
         width:auto !important;
         max-height:inherit !important;
-        line-height: auto !important; 
+        line-height: auto !important;
     }
 
     body[yahoo] .hide-mobile{
@@ -62,7 +62,7 @@ https://github.com/impishj/Css-To-Inline-Styles
 
 Css To Inline Styles.app
 
-Usage: 
+Usage:
 1. Drag a html file on Css To Inline Styles.app (on the doc or wherever you place the file.)
 2. Copy the output in the window
 
