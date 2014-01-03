@@ -210,7 +210,7 @@ class CSSToInlineStyles
 	private function tagReplaceHTML($html)
 	{
 		// Replace <mobile> tags with approporate code to hide for desktop 
-		$html = preg_replace("~<mobile>~", "<!--<![if mso]-->\n<div class=\"show-mobile\" style=\"display:none; width:0px; max-height:0px; overflow:hidden; mso-hide:all; line-height: 0px;\" > \n", $html);
+		$html = preg_replace("~<mobile>~", "\n<!--<![if !mso]--><!-- -->\n<div class=\"show-mobile\" style=\"display:none; width:0px; max-height:0px; overflow:hidden; mso-hide:all; line-height: 0px;\" > \n", $html);
 		$html = preg_replace("~</mobile>~", "</div>\n<!--<![endif]-->\n", $html);
 
 		// return
